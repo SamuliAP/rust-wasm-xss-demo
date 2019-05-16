@@ -3,9 +3,40 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
     <title>tietoturva-ht</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif
+      }
+      .grid-container {
+        display: grid;
+        max-width: 500px;
+        grid-template-areas: 
+          'title title' 
+          'input input' 
+          'output ouput';
+        grid-gap: 10px;
+        padding: 10px;
+      }
+      .output {
+        min-height: 50px;
+      }
+    </style>
   </head>
   <body>
-      
+    <div class="grid-container">
+
+      <label for="input-safe">Safe</label>
+      <label for="input-unsafe">Unsafe</label>
+
+      <textarea id="input-safe"></textarea>
+      <textarea id="input-unsafe"></textarea>
+
+      <div class="output" id="output-safe"></div>
+      <div class="output" id="output-unsafe"></div>
+    </div>
+    <div>
+      <label for="input-file">Benchmarking:</label><br>
+      <input type="file" id="input-file">
+    </div>
   </body>
 </html>
-
