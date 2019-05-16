@@ -1,7 +1,7 @@
-use wasm_bindgen::prelude::*;
 mod sanitizers;
-use sanitizers::HtmlSanitizer;
-use sanitizers::Sanitizer;
+
+use wasm_bindgen::prelude::*;
+use sanitizers::SanitizerFactory;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -10,9 +10,9 @@ use sanitizers::Sanitizer;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-pub fn sanitize_html(text: &str) -> String {
+pub fn sanitize_html(text: String) -> String {
     set_panic_hook();
-    String::from(HtmlSanitizer::sanitize(text))
+    SanitizerFactory::html_sanitizer().sanitize(text)
 }
 
 fn set_panic_hook() {
