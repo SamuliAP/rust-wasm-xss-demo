@@ -1,7 +1,8 @@
-mod sanitizers;
+mod encoders;
 
 use wasm_bindgen::prelude::*;
-use sanitizers::SanitizerFactory;
+use encoders::HtmlEntityEncoder;
+use encoders::Encoder;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -10,9 +11,9 @@ use sanitizers::SanitizerFactory;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-pub fn sanitize_html(text: String) -> String {
+pub fn encode_html(input: &str) -> String {
     set_panic_hook();
-    SanitizerFactory::html_sanitizer().sanitize(text)
+    HtmlEntityEncoder::encode(input)
 }
 
 fn set_panic_hook() {
