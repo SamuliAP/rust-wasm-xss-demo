@@ -8,7 +8,7 @@ A client side XSS-sanitizer could be needed e.g. in situations where the client 
 The project was made as a part of a university course on information security.
 
 ## Prerequisities
-Rust 1.30.0 or later, npm, probably other stuff like openssl
+Rust 1.30.0 or later, npm. Probably other stuff, like openssl.
 
 ## Running the Demo
 In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running `npm install` and `npm start` in the project root.
