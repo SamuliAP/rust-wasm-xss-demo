@@ -8,4 +8,4 @@ A client side XSS-sanitizer could be needed e.g. in situations where the client 
 The project was made as a part of a university course on information security.
 
 ## Usage
-In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running npm start in project root.
+In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running `npm start` in project root.
