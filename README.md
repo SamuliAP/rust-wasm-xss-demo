@@ -43,6 +43,6 @@ Rust 1.30.0 or later, npm. Probably other stuff I'm forgetting, like openssl and
 ## Configuration
 In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running `npm install` and `npm start` in the project root. This will install dependencies, compile and package the rust source code to a WebAssembly module via [wasm-pack](https://github.com/rustwasm/wasm-pack), and build the javascript bundles served by the webpack test server that starts listening on a local port (most likely localhost:8080).
 
-The demo contains two input fields that propagate their contents to a <div/> on blur. One of them is sanitized with the .wasm module, one is not. 
+The demo contains two input fields that propagate their contents to a div element on blur. One of them is sanitized with the .wasm module, one is not. 
 
 There's also a file upload handle for text files which are ran through a naive js implementation of html encoding and the .wasm module respectively. The time taken to complete the operation in ms is logged to the browser console.
