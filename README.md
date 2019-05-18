@@ -40,8 +40,8 @@ The demo is not ran on a public server, so it has to be set up locally.
 ## Prerequisities
 Rust 1.30.0 or later, npm. Probably other stuff I'm forgetting, like openssl and pkg-config.
 
-## Configuring a Local Test Server via Webpack
-In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running `npm install` and `npm start` in the project root.
+## Configuration
+In this demo we compile both the .wasm binary, and the .js source via webpack. Build and start the demo by running `npm install` and `npm start` in the project root. This will install dependencies, compile and package the rust source code to a WebAssembly module via [wasm-pack](https://github.com/rustwasm/wasm-pack), and build the javascript bundles served by the webpack test server that start listening on a local port (most likely localhost:8080).
 
 The demo contains two input fields that propagate their contents to a <div/> on blur. One of them is sanitized with the .wasm module, one is not. 
 
