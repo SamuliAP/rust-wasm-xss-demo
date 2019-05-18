@@ -1,7 +1,7 @@
 import("../crate/pkg").then(module => {
 
   const outputEncoded = e => {
-    document.getElementById("output-safe").innerHTML = module.encode_attribute(e.target.value)
+    document.getElementById("output-safe").innerHTML = module.encode_html(e.target.value)
   }
 
   const outputUnencoded = e => {
