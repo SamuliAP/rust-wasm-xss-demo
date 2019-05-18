@@ -1,6 +1,9 @@
 mod encoders;
 mod utils;
 
+#[cfg(test)]
+mod tests;
+
 use wasm_bindgen::prelude::*;
 use encoders::*;
 
