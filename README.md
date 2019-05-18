@@ -35,6 +35,7 @@ Most of the testing has been done with html entities, but the other encoders hav
 The library includes very rudamentary unit tests, found in crate/src/test. These can be ran via the command `cargo test` in the library src folder. More unit testing is necessary for better code coverage.
 
 ## The Demo
+The demo is not ran on a public server, so it has to be set up locally.
 
 ## Prerequisities
 Rust 1.30.0 or later, npm. Probably other stuff I'm forgetting, like openssl and pkg-config.
